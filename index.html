@@ -19,6 +19,13 @@
   </head>
 
   <body>
+    <div id="loader">
+      <div class="loader-ring"></div>
+      <p class="welcome-text">
+        Bienvenue sur notre site médical. Préparez-vous à découvrir nos
+        services.
+      </p>
+    </div>
     <!-- Bannière Top -->
     <div class="top-banner">
       <p>
@@ -35,9 +42,9 @@
         </div>
 
         <ul class="nav-links">
-          <li><a href="#">Nos médicaments</a></li>
-          <li><a href="#">Aires thérapeutiques</a></li>
-          <li><a href="#">Ressources et événements</a></li>
+          <li><a href="https://vmed.fr/">Nos médicaments</a></li>
+          <li><a href="https://vmed.fr/">Aires thérapeutiques</a></li>
+          <li><a href="https://vmed.fr/">Ressources et événements</a></li>
           <li><a href="https://vmed.fr/">Nous contacter</a></li>
         </ul>
 
@@ -48,9 +55,9 @@
       <nav class="sub-nav">
         <ul>
           <li><a href="https://vmed.fr/">À propos</a></li>
-          <li><a href="#">Utilisation en pratique</a></li>
-          <li><a href="#">Données cliniques</a></li>
-          <li><a href="#">Tolérance & bon usage</a></li>
+          <li><a href="https://vmed.fr/">Utilisation en pratique</a></li>
+          <li><a href="https://vmed.fr/">Données cliniques</a></li>
+          <li><a href="https://vmed.fr/">Tolérance & bon usage</a></li>
           <li>
             <a href="https://vmed.fr/expertise/content-strategy"
               >Ressources & Services</a
@@ -67,27 +74,76 @@
             Lorem ipsum <br />
             dolor
           </h1> -->
-          <h1>Lorem ipsum <span class="break">dolor</span></h1>
+          <h1>Bienvenue sur <span class="break">VMed</span></h1>
           <p>
-            Lorem ipsum dolor <br />
-            sit amet, consectetur
+            Découvrez nos solutions <br />
+            <!-- innovantes pour la santé -->
+            <span id="dynamicText">innovantes pour la santé</span>
+            <span id="cursor">|</span>
           </p>
         </div>
-        <div class="hero-image"></div>
+        <!-- <div class="hero-image">
+          <img src="images/finger-3389916_1280.jpg" alt="" />
+        </div> -->
+
+        <div class="hero-image">
+          <div class="arrow left" onclick="previousSlide()">&#10094;</div>
+
+          <img
+            class="carousel-slide"
+            src="images/finger-3389916_1280.jpg"
+            alt="Image 1"
+          />
+          <img
+            class="carousel-slide"
+            src="images/analysis-2030261_1280.jpg"
+            alt="Image 2"
+          />
+          <img
+            class="carousel-slide"
+            src="images/microscope-3184432_1280.jpg"
+            alt="Image 3"
+          />
+
+          <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+        </div>
       </section>
 
       <section class="content">
-        <div class="info-box">Lorem ipsum dolor sit amet.</div>
+        <!-- <div class="info-box">Explorez nos services médicaux</div> -->
+        <div class="info-box">
+          <button class="accordion">Explorez nos services médicaux.</button>
+          <div class="panel">
+            <p>
+              Découvrez une large gamme de services et solutions médicaux
+              adaptés à vos besoins professionnels.
+            </p>
+            <p>
+              Nous vous offrons des ressources complètes et des informations
+              actualisées pour améliorer vos pratiques de santé.
+            </p>
+          </div>
+        </div>
 
         <div class="cards">
           <div class="card">
-            <div class="card-image"></div>
-            <h2>Lorem Ipsum</h2>
+            <!-- <div class="card-image"></div> -->
+            <img
+              class="card-image"
+              src="images/stethoscope-7094411_1280.jpg"
+              alt=""
+            />
+            <h2>Solutions santé</h2>
             <button>Accédez à la page</button>
           </div>
           <div class="card">
-            <div class="card-image"></div>
-            <h2>Lorem Ipsum</h2>
+            <!-- <div class="card-image"></div> -->
+            <img
+              class="card-image"
+              src="images/email-4284157_1280.png"
+              alt=""
+            />
+            <h2>Informations clés</h2>
             <button>Accédez à la page</button>
           </div>
         </div>
@@ -100,15 +156,14 @@
         <div class="reference">
           <button class="close-btn">&times;</button>
           <h3>Référence</h3>
-          <p>1. Lorem ipsum dolor sit amet</p>
+          <p>1. Découvrez nos solutions santé</p>
         </div>
       </section>
 
       <div class="footer-text">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliio in ipsa
-          ipsum iure mollitia odio omnis quidem, sit, soluta sunt temporibus
-          vero!
+          Explorez notre expertise pour améliorer <br />
+          vos pratiques médicales au quotidien.
         </p>
         <p>
           Communication promotionnelle Réf XX-XXX-XXX-XXXX - Visa
@@ -133,32 +188,32 @@
         <div class="footer-middle">
           <ul>
             <li>
-              <a href="#"
+              <a href="https://vmed.fr/"
                 >Déclarer un effet <br />
                 indésirable</a
               >
             </li>
             <li>
-              <a href="#"
+              <a href="https://vmed.fr/"
                 >Conditions générales<br />
                 d'utilisation</a
               >
             </li>
             <li>
-              <a href="#"
+              <a href="https://vmed.fr/"
                 >Notice d'informations sur<br />
                 les données personnelles</a
               >
             </li>
             <li>
-              <a href="#"
+              <a href="https://vmed.fr/"
                 >Information sur les<br />
                 cookies</a
               >
             </li>
-            <li><a href="#">Plan du site</a></li>
-            <li><a href="#">Vmed.fr</a></li>
-            <li><a href="#">Information Médicale</a></li>
+            <li><a href="https://vmed.fr/">Plan du site</a></li>
+            <li><a href="https://vmed.fr/">Vmed.fr</a></li>
+            <li><a href="https://vmed.fr/">Information Médicale</a></li>
           </ul>
         </div>
 
@@ -183,4 +238,60 @@
   document.querySelector(".close-btn").addEventListener("click", function () {
     document.querySelector(".reference").style.display = "none";
   });
+</script>
+
+<!-- Animation Texte -->
+<script>
+  const texts = [
+    "une approche innovante", // Premier texte
+    "pour votre bien-être", // Deuxième texte
+  ];
+
+  const dynamicText = document.getElementById("dynamicText");
+  const cursor = document.getElementById("cursor");
+
+  const maxLength = "innovantes pour la santé".length; // Limiter la longueur du texte pour ne pas déborder
+
+  // Fonction pour simuler un effet de "taper" lettre par lettre
+  function typeText(text, callback) {
+    dynamicText.textContent = ""; // Effacer l'ancien texte avant de commencer à taper le nouveau texte
+    let i = 0;
+
+    // Fonction d'animation
+    const typingInterval = setInterval(() => {
+      dynamicText.textContent += text.charAt(i);
+      i++;
+      if (i === text.length) {
+        clearInterval(typingInterval); // Arrêter l'intervalle une fois que tout le texte est écrit
+        if (callback) callback(); // Appeler la fonction de rappel après l'animation
+      }
+    }, 100); // Animer lettre par lettre avec un délai de 100 ms
+  }
+
+  // Fonction pour changer de texte après une pause
+  function changeText() {
+    const randomIndex = Math.floor(Math.random() * texts.length); // Choisir un texte aléatoire parmi les 2 textes
+    let newText = texts[randomIndex]; // Texte choisi
+
+    // Limiter la longueur du texte pour qu'il ne déborde pas
+    if (newText.length > maxLength) {
+      newText = newText.slice(0, maxLength);
+    }
+
+    // Appliquer l'animation d'écriture
+    typeText(newText, () => {
+      // Après l'animation, attendre 3 secondes avant de changer à nouveau
+      setTimeout(() => {
+        changeText(); // Change de texte après 3 secondes
+      }, 3000);
+    });
+  }
+
+  // Initialiser avec le premier texte
+  typeText(texts[0]);
+
+  // Commencer la boucle infinie
+  setTimeout(() => {
+    changeText(); // Change de texte après 3 secondes
+  }, 3000); // Change le texte après 3 secondes pour la première fois
 </script>

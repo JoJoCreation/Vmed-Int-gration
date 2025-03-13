@@ -44,7 +44,7 @@
     font-size: 1.5rem;
     max-width: 100%;
   }
-  .hero .hero-image {
+  .hero .hero .hero-image {
     width: 50%;
     height: 250px;
   }
@@ -52,6 +52,11 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+  }
+  main .content .cards .card h2 {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
   }
   .footer-container {
     flex-direction: column;
