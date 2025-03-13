@@ -227,71 +227,72 @@
         </div>
       </div>
     </footer>
-  </body>
-</html>
+    <!-- Mon Code JavaScript -->
 
-<!-- Mon Code JavaScript -->
+    <!-- Fermer la croix sur dans le div référence -->
 
-<!-- Fermer la croix sur dans le div référence -->
+    <script>
+      document
+        .querySelector(".close-btn")
+        .addEventListener("click", function () {
+          document.querySelector(".reference").style.display = "none";
+        });
+    </script>
 
-<script>
-  document.querySelector(".close-btn").addEventListener("click", function () {
-    document.querySelector(".reference").style.display = "none";
-  });
-</script>
+    <!-- Animation Texte -->
+    <script>
+      const texts = [
+        "une approche innovante", // Premier texte
+        "pour votre bien-être", // Deuxième texte
+      ];
 
-<!-- Animation Texte -->
-<script>
-  const texts = [
-    "une approche innovante", // Premier texte
-    "pour votre bien-être", // Deuxième texte
-  ];
+      const dynamicText = document.getElementById("dynamicText");
+      const cursor = document.getElementById("cursor");
 
-  const dynamicText = document.getElementById("dynamicText");
-  const cursor = document.getElementById("cursor");
+      const maxLength = "innovantes pour la santé".length; // Limiter la longueur du texte pour ne pas déborder
 
-  const maxLength = "innovantes pour la santé".length; // Limiter la longueur du texte pour ne pas déborder
+      // Fonction pour simuler un effet de "taper" lettre par lettre
+      function typeText(text, callback) {
+        dynamicText.textContent = ""; // Effacer l'ancien texte avant de commencer à taper le nouveau texte
+        let i = 0;
 
-  // Fonction pour simuler un effet de "taper" lettre par lettre
-  function typeText(text, callback) {
-    dynamicText.textContent = ""; // Effacer l'ancien texte avant de commencer à taper le nouveau texte
-    let i = 0;
-
-    // Fonction d'animation
-    const typingInterval = setInterval(() => {
-      dynamicText.textContent += text.charAt(i);
-      i++;
-      if (i === text.length) {
-        clearInterval(typingInterval); // Arrêter l'intervalle une fois que tout le texte est écrit
-        if (callback) callback(); // Appeler la fonction de rappel après l'animation
+        // Fonction d'animation
+        const typingInterval = setInterval(() => {
+          dynamicText.textContent += text.charAt(i);
+          i++;
+          if (i === text.length) {
+            clearInterval(typingInterval); // Arrêter l'intervalle une fois que tout le texte est écrit
+            if (callback) callback(); // Appeler la fonction de rappel après l'animation
+          }
+        }, 100); // Animer lettre par lettre avec un délai de 100 ms
       }
-    }, 100); // Animer lettre par lettre avec un délai de 100 ms
-  }
 
-  // Fonction pour changer de texte après une pause
-  function changeText() {
-    const randomIndex = Math.floor(Math.random() * texts.length); // Choisir un texte aléatoire parmi les 2 textes
-    let newText = texts[randomIndex]; // Texte choisi
+      // Fonction pour changer de texte après une pause
+      function changeText() {
+        const randomIndex = Math.floor(Math.random() * texts.length); // Choisir un texte aléatoire parmi les 2 textes
+        let newText = texts[randomIndex]; // Texte choisi
 
-    // Limiter la longueur du texte pour qu'il ne déborde pas
-    if (newText.length > maxLength) {
-      newText = newText.slice(0, maxLength);
-    }
+        // Limiter la longueur du texte pour qu'il ne déborde pas
+        if (newText.length > maxLength) {
+          newText = newText.slice(0, maxLength);
+        }
 
-    // Appliquer l'animation d'écriture
-    typeText(newText, () => {
-      // Après l'animation, attendre 3 secondes avant de changer à nouveau
+        // Appliquer l'animation d'écriture
+        typeText(newText, () => {
+          // Après l'animation, attendre 3 secondes avant de changer à nouveau
+          setTimeout(() => {
+            changeText(); // Change de texte après 3 secondes
+          }, 3000);
+        });
+      }
+
+      // Initialiser avec le premier texte
+      typeText(texts[0]);
+
+      // Commencer la boucle infinie
       setTimeout(() => {
         changeText(); // Change de texte après 3 secondes
-      }, 3000);
-    });
-  }
-
-  // Initialiser avec le premier texte
-  typeText(texts[0]);
-
-  // Commencer la boucle infinie
-  setTimeout(() => {
-    changeText(); // Change de texte après 3 secondes
-  }, 3000); // Change le texte après 3 secondes pour la première fois
-</script>
+      }, 3000); // Change le texte après 3 secondes pour la première fois
+    </script>
+  </body>
+</html>
